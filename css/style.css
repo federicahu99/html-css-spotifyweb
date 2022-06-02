@@ -1,0 +1,116 @@
+/* Palette
+page background-color: #141922
+player background-color: #5a6e7f */
+
+
+/* General */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+/* Sidebar */
+
+#sidebar {
+    height: 100vh;
+    width: 210px;
+    background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    z-index: 2;
+}
+
+#sidebar img {
+    width: 85%
+}
+
+#sidebar-overflow {
+    overflow-y: scroll;
+    height: 150px;
+    margin: 20px 0;
+}
+
+/* Header */
+
+header {
+    height: 70px;
+    width: 100%;
+    background-color: rgba(14, 14, 14, 0.8);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 10px;
+}
+
+#header-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+header a {
+    color: white;
+    border: 2px solid white;
+    padding: 7px 40px;
+    border-radius: 20px;
+}
+
+/* Body */
+
+body {
+    background-color: #141922;
+    overflow: hidden;
+}
+
+/* Main */
+
+.container {
+    padding: 0 0 240px 240px;
+}
+
+#overflow {
+    overflow-y: scroll;
+    height: 90vh;
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; 
+}
+
+/* Player */
+
+#player {
+    background-color: #5a6e7f;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
