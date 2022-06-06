@@ -10,8 +10,11 @@ player background-color: #5a6e7f */
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    color: white;
+}
+
+body {
+    background-color: #141922;
+    overflow: hidden;
 }
 
 a {
@@ -23,41 +26,18 @@ li {
     list-style: none;
 }
 
-/* Sidebar */
-
-#sidebar {
-    height: 100vh;
-    width: 210px;
-    background-color: black;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    padding: 15px;
-    z-index: 2;
-}
-
-#sidebar img {
-    width: 85%;
-    margin-bottom: 20px;
-}
-
-#sidebar-overflow {
-    overflow-y: scroll;
-    height: 150px;
-    margin: 20px 0;
-}
 
 /* Header */
 
 header {
     height: 100px;
     width: 100%;
+    padding-left: 210px;
     background-color: rgba(14, 14, 14, 0.8);
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
-    padding: 10px;
 }
 
 #header-flex {
@@ -74,11 +54,46 @@ header a {
     border-radius: 20px;
 }
 
-/* Body */
+/* Sidebar */
 
-body {
-    background-color: #141922;
-    overflow: hidden;
+#sidebar {
+    height: 100vh;
+    width: 210px;
+    background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    z-index: 2;
+    color: #888;
+    line-height: 160%;
+}
+
+#sidebar img {
+    width: 85%;
+    margin-bottom: 20px;
+}
+
+#sidebar p {
+    font-size: 18px;
+    display: block;
+    margin: 15px 0;
+}
+
+#sidebar i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+#sidebar h3 {
+    font-size: 20px;
+    margin: 25px 0 15px 0;
+}
+
+.fa-plus {
+    background-color: #888;
+    padding: 10px 12px;
+    color:#141922
 }
 
 /* Main */
@@ -89,10 +104,10 @@ body {
 
 #overflow {
     overflow-y: scroll;
-    height: 90vh;
+    height: 88vh;
     width: 100%;
     padding-bottom: 80px;
-    padding-top: 80px;
+    padding-top: 130px;
 }
 
 /* SCROLLBAR */
@@ -117,21 +132,29 @@ body {
     z-index: 3;
 }
 
-
 /* Xs */
 
 @media screen and (max-width: 576px) {
+    
+    header {
+        padding-left: 50px;
+    }
 
     .container {
         padding-left: 80px;
     }
-
+    
     #sidebar {
         width: 50px;
     }
-
-    #sidebar img, #sidebar div {
+    
+    #sidebar img, #sidebar p {
         display: none;
     }
+
+    #sidebar-overflow {
+        overflow-y: scroll;
+        height: 150px;
+        margin: 20px 0;
+    }
 }
-    
