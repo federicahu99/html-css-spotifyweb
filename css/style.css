@@ -87,6 +87,10 @@ header a {
     line-height: 100%;
 }
 
+#sidebar a {
+    display: block;
+}
+
 #sidebar img {
     width: 90%;
     margin-bottom: 15px;
@@ -100,7 +104,7 @@ header a {
 
 #sidebar li {
     font-size: 14px;
-    display: inline-block;
+    display: block;
     margin: 10px 0;
 }
 
@@ -112,6 +116,10 @@ header a {
 #sidebar h3 {
     font-size: 20px;
     margin: 20px 0 15px 0;
+}
+
+li > a {
+    color: grey;
 }
 
 .fa-plus {
@@ -151,12 +159,13 @@ header a {
 }
 
 #nav-main {
-    width: 80%;
+    width: 85%;
     margin: 10px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     color:#888;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 /* Recent played */
@@ -172,7 +181,6 @@ header a {
 }
 
 .playlist {
-    width: 150px;
     flex-basis: 15%;
     margin-right: 10px;
 }
@@ -209,7 +217,6 @@ header a {
 
 .card {
     margin-right: 10px;
-    width: 150px;
     flex-basis: 15%
 }
 
@@ -257,13 +264,13 @@ header a {
 /* left section footer*/
 
 #current-listening {
-    width: 25%;
+    width: 22%;
     display: flex;
     align-items: center;
 }
 
 #current-listening img{
-    width: 18%;
+    width: 30%;
     margin-right: 15px;
 }
 
@@ -294,8 +301,8 @@ header a {
 }
 
 .row {
-    width: 50%;
-    height: 90%;
+    width: 40%;
+    height: 60%;
     display: flex;
     flex-direction: column;
 }
@@ -309,7 +316,7 @@ header a {
 
 #upper {
     text-align: center;
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -379,4 +386,22 @@ header a {
         height: 100px;
         margin: 20px 0;
     }
+}
+
+/* 992px */
+
+@media screen and (max-width: 992px) {
+
+    .playlist , .card {
+        flex-basis: 23%;
+    }
+
+    #nav-main {
+        width: 80%;
+    }
+
+    #nav-main a{
+        margin: 20px 0;
+    }
+
 }
