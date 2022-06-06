@@ -14,7 +14,6 @@ player background-color: #5a6e7f */
 
 body {
     background-color: #141922;
-    overflow: hidden;
 }
 
 a {
@@ -26,7 +25,15 @@ li {
     list-style: none;
 }
 
+h4 {
+    color: #5a6e7f;
+    margin-bottom: 20px; 
+}
 
+main {
+    margin-left: 230px;
+    width: calc( 100% - 230px);
+}
 
 /* Header */
 
@@ -62,34 +69,39 @@ header a {
     height: 100vh;
     width: 210px;
     background-color: black;
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     padding: 18px;
-    z-index: 2;
     color: #888;
-    line-height: 40%;
+    line-height: 100%;
 }
 
 #sidebar img {
-    width: 100%;
-    margin-bottom: 30px;
+    width: 90%;
+    margin-bottom: 15px;
 }
 
 #sidebar p {
-    font-size: 16px;
+    font-size: 14px;
     display: inline-block;
-    margin: 15px 0;
+    margin: 10px 0;
+}
+
+#sidebar li {
+    font-size: 14px;
+    display: inline-block;
+    margin: 10px 0;
 }
 
 #sidebar i {
-    font-size: 25px;
+    font-size: 20px;
     margin-right: 10px;
 }
 
 #sidebar h3 {
     font-size: 20px;
-    margin: 25px 0 15px 0;
+    margin: 20px 0 15px 0;
 }
 
 .fa-plus {
@@ -100,14 +112,10 @@ header a {
 
 /* Main */
 
-.container {
-    padding: 0 0 45px 240px;
-    width: 100%;
-}
 
 #overflow {
-    overflow-y: scroll;
-    height: 88vh;
+    overflow-y: auto;
+    height: calc(100vh - 100px);
     width: 100%;
     padding-bottom: 80px;
     padding-top: 130px;
@@ -115,7 +123,7 @@ header a {
 
 #nav-main {
     width: 80%;
-    margin: 0 auto;
+    margin: 10px auto;
     display: flex;
     justify-content: space-around;
     color:#888;
@@ -126,17 +134,18 @@ header a {
 
 #recent {
     color: white;
-    margin-bottom: 25px;
+    margin: 30px 0;
 }
 
 .flex-recent {
     display: flex;
-    flex: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .playlist {
-    padding: 10px;
-    flex-basis: 20%;
+    flex-basis: calc( 100% - 210px ) 20%;
+    margin-right: 10px;
 }
 
 .playlist h3 {
@@ -146,15 +155,43 @@ header a {
 }
 
 .playlist h4 {
-    color: #5a6e7f;
     text-align: center;
     margin: 8px 0 15px 0;
 }
 
 .playlist img{
-    height: 180px;
-    width: 180px;
+    height: 145px;
 }
+
+/* Created for you */
+
+.flex-created {
+    display: flex;
+}
+
+#second-section {
+    margin: 35px 0;
+}
+
+#created {
+    color: white;
+    margin: 15px 0;
+}
+
+.for-you {
+    margin-right: 10px;
+}
+
+.for-you img{
+    height: 145px;
+}
+
+.for-you h3{
+    color: white;
+    text-align: center;
+}
+
+
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
@@ -175,7 +212,7 @@ header a {
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 3;
+    z-index: 2;
 }
 
 /* Xs */
