@@ -75,14 +75,14 @@ header a {
 /* Sidebar */
 
 #sidebar {
-    max-height: calc( 100vh - 100px);
-    width: 210px;
+    height: calc( 100% - 100px);
+    width: 240px;
     margin-bottom: 100px;
     background-color: black;
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 18px;
+    padding: 18px 15px 0 15px;
     color: #888;
     line-height: 100%;
 }
@@ -121,7 +121,6 @@ header a {
 }
 
 #scarica {
-    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -148,8 +147,7 @@ header a {
     overflow-y: auto;
     height: calc(100vh - 100px);
     width: 100%;
-    padding-bottom: 20px;
-    padding-top: 130px;
+    padding: 130px 0 20px 25px;
 }
 
 #nav-main {
@@ -175,7 +173,7 @@ header a {
 
 .playlist {
     width: 150px;
-    flex-basis: calc( 100% - 270px ) 20%;
+    flex-basis: 15%;
     margin-right: 10px;
 }
 
@@ -212,7 +210,7 @@ header a {
 .card {
     margin-right: 10px;
     width: 150px;
-    flex-basis: calc( 100% - 210px ) 20%;
+    flex-basis: 15%
 }
 
 .card img{
@@ -256,6 +254,8 @@ header a {
     padding: 10px 15px;
 }
 
+/* left section footer*/
+
 #current-listening {
     width: 25%;
     display: flex;
@@ -264,19 +264,94 @@ header a {
 
 #current-listening img{
     width: 18%;
-    margin-right: 6px;
+    margin-right: 15px;
 }
 
 #current-listening h4{
     color: white;
-    margin-bottom: 6px; 
-    color:grey;
+    margin-bottom: 0;
 }
 
 #current-listening span {
     font-size: 12px;
     margin-right: 6px;
     color: grey;
+}
+
+#favorite-dowload {
+    color: grey;
+}
+
+#favorite-dowload i{
+    margin-left: 5px;
+    text-align: center;
+}
+
+/* Center section footer*/
+
+#flex-footer {
+    display: flex;
+}
+
+.row {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.controller {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#upper {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+#bottom {
+    width: 85%;
+    margin: 0 auto;
+}
+
+#bottom hr {
+    width: 70%;
+    border: none;
+    height: 3px;
+    color: white;
+}
+
+#bottom h5 {
+    color: white;
+}
+
+#upper i {
+    font-size: 30px;
+}
+
+/* Third section footer*/
+
+#output {
+    width: 18%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#output i {
+    color: white;
+}
+
+#output hr {
+    color: grey;
+    width: 40%;
+    border: none;
+    height: 3px;
 }
 
 /* Xs */
