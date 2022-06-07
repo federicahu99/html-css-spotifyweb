@@ -44,6 +44,10 @@ hr {
     margin: 20px 0;
 }
 
+img {
+    width: 100%;
+}
+
 /* Header */
 
 header {
@@ -55,12 +59,14 @@ header {
     left: 0;
     right: 0;
     top: 0;
+    z-index:1;
+    margin-left: 240px;
 }
 
 #header-flex {
     display: flex;
     justify-content: flex-end;
-    margin: 30px 25px 30px 0;
+    margin: 30px 270px 30px 0;
 }
 
 
@@ -137,16 +143,16 @@ li > a {
     position: relative;
 }
 
-#dowload { 
-    padding: 10px 10px;
+#download { 
+    padding: 10px;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    top: 39vh;
     left: 0;
     background-color: #000;
 }
 
-#link-dowload > a {
+#link-download > a {
     color: #5a6e7f;
 }
 
@@ -157,7 +163,7 @@ li > a {
     border-radius: 50%;
 }
 
-#hr-dowload {
+#hr-download {
     height: 0.5px;
 }
 
@@ -212,10 +218,6 @@ li > a {
     margin: 8px 0 15px 0;
 }
 
-.playlist img{
-    width: 100%;
-}
-
 figure {
     transition: 0.5s;
 }
@@ -242,7 +244,6 @@ figure {
 }
 
 .card img{
-    width: 100%;
     transition: 0.5s;
 }
 
@@ -291,8 +292,9 @@ figure {
     align-items: center;
 }
 
-#current-listening img{
-    width: 30%;
+#current-img{
+    width: 80px;
+    height: 80px;
     margin-right: 15px;
 }
 
@@ -435,13 +437,12 @@ figure {
     #nav-main a{
         margin: 20px 0;
     }
-    
 }
 
 
 /* 768 */
 @media screen and (max-width: 768px) {
-    
+
     .playlist , .card {
         flex-basis: 45%;
     }
@@ -453,7 +454,6 @@ figure {
     #output {
         width: 20%;
     }
-
 }
     
 /* 576px */
@@ -466,23 +466,26 @@ figure {
     }
 
     header {
-         padding-left: 50px;
+         margin-left: 80px;
+    }
+
+    #header-flex {
+        margin: 20px 95px 0 12px
     }
         
     #sidebar {
         width: 80px;
     }
 
-    #sidebar a > p , #sidebar img, #scarica{
+    #sidebar a > p , 
+    #sidebar img, 
+    #download, 
+    #sidebar-hide{
         display: none;
     }
 
     #sidebar a {
         padding: 25px 15px;
-    }
-        
-    #sidebar-hide {
-        display: none;
     }
     
     #logo-576 {
@@ -497,10 +500,6 @@ figure {
         height: calc(100vh - 100px);
         width: 100%;
         padding: 130px 0 20px 25px;
-    }
-
-    .playlist , .card {
-        flex-basis: 90%;
     }
 }
 
@@ -538,13 +537,32 @@ figure {
 
 
 #sidebar a:active {
-    border-left: 2px solid green;
+    border-left: 2px solid #4CAF50;
 }
 
 #nav-main a:active {
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid #4CAF50;
 }
 
 #player a:hover {
     text-shadow: #fff 1px 0 5px;
+}
+
+#sidebar a:hover ,
+#nav-main a:hover,
+#player a:hover{
+    text-shadow: #fff 0.5px 0.5px 1.5px;
+}
+
+#header-flex:hover {
+    text-shadow: #fff 1px 0 5px;
+    transform: scale(1.02);
+}
+
+.hr-container:hover #current-volume {
+    background-color: #4CAF50;
+}
+
+.hr-container:hover #current-second {
+    background-color: #4CAF50;
 }
