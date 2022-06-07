@@ -137,7 +137,7 @@ li > a {
     position: relative;
 }
 
-#scarica { 
+#dowload { 
     padding: 10px 10px;
     width: 100%;
     position: absolute;
@@ -150,14 +150,16 @@ li > a {
     color: #5a6e7f;
 }
 
-#profilo .fa-user{
+#profile .fa-user{
     color:white;
     padding: 5px 8px;
     background-color: #5a6e7f;
     border-radius: 50%;
 }
 
-
+#hr-dowload {
+    height: 0.5px;
+}
 
 /* Main */
  
@@ -197,7 +199,6 @@ li > a {
 .playlist {
     flex-basis: 15%;
     margin-right: 10px;
-    
 }
 
 .playlist h3 {
@@ -213,6 +214,9 @@ li > a {
 
 .playlist img{
     width: 100%;
+}
+
+figure {
     transition: 0.5s;
 }
 
@@ -357,8 +361,12 @@ li > a {
     color: white;
 }
 
-#upper i {
-    font-size: 30px;
+#upper  {
+    font-size: 20px;
+}
+
+#upper #big-play {
+    font-size: 35px;
 }
 
 .hr-container {
@@ -407,7 +415,7 @@ li > a {
     top: 0;
     border: none;
     height: 3px;
-    width: 30px;
+    width: 10%;
     background-color: white;
 }
 
@@ -498,15 +506,45 @@ li > a {
 
 /* Effects */
 
-.playlist img:hover , .card img:hover {
+.playlist figure:hover ,
+.card figure:hover {
     transform: translatey(-8px) scale(1.06);
+}
+
+.playlist img:hover, 
+.card img:hover {
     filter: grayscale(0.9);
 }
 
-.playlist img:hover .playlist::After {
+.playlist figure, 
+.card figure {
+    position: relative;
+}
+
+.playlist:hover  figure::after,
+.card:hover  figure::after {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
     content: '\f144' ;
+    font-size: 35px;
     position: absolute;
     left: 50%;
-    right: 50%;
-    transform: translate(-50% -50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+
+#sidebar a:active {
+    border-left: 2px solid green;
+}
+
+#nav-main a:active {
+    border-bottom: 2px solid green;
+}
+
+#player a:hover {
+    text-shadow: #fff 1px 0 5px;
 }
