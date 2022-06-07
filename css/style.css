@@ -346,11 +346,11 @@ li > a {
 }
 
 #song-lenght {
-    width: 70%;
+    width: 90%;
     border: none;
     height: 3px;
     background-color: grey;
-    margin: 20px 0;
+    margin: 20px 20px;
 }
 
 #bottom h5 {
@@ -361,9 +361,13 @@ li > a {
     font-size: 30px;
 }
 
+.hr-container {
+    width: 100%;
+}
+
 #current-second {
     position: absolute;
-    left: 77px;
+    left: 50px;
     top: 0;
     border: none;
     height: 3px;
@@ -385,6 +389,11 @@ li > a {
     color: white;
 }
 
+#output a {
+    margin-right: 10px;
+}
+
+
 #max-volume {
     color: grey;
     width: 40%;
@@ -394,7 +403,7 @@ li > a {
 
 #current-volume {
     position: absolute;
-    left: 147px;
+    left: 83px;
     top: 0;
     border: none;
     height: 3px;
